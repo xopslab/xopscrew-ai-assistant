@@ -1,0 +1,23 @@
+[project]
+name = "xopscrew_ai_assistant"
+version = "0.1.0"
+description = "xopscrew-ai-assistant using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "crewai[tools]>=0.140.0,<1.0.0"
+]
+
+[project.scripts]
+xopscrew_ai_assistant = "xopscrew_ai_assistant.main:run"
+run_crew = "xopscrew_ai_assistant.main:run"
+train = "xopscrew_ai_assistant.main:train"
+replay = "xopscrew_ai_assistant.main:replay"
+test = "xopscrew_ai_assistant.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"
